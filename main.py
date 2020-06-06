@@ -2,26 +2,25 @@
 Name: Hossain Ahmad Sobhen Morshed
 Date: Nov-17-2019
 
-Exam #2 Part #1 –  (50 points).  Post your SOURCE Python code to Moodle so I can download and run it.  Remember to implement “Good Python Programming Style” as per Python Programming rubric.  Remember to do both “positive testing” (i.e. your program produces the correct result), and “negative testing” (your program rejects negative input). Good Luck,and give me your Best Work!!
-
-Count Lines, words, and characters in a file. (50 points): One of the most memorable speeches in US history is the “Gettysburg Address” by Abraham Lincoln. Your task is to create a Python program that will read the file (“Gettysburg_Address.txt) as input, and count the number of lines, the number of words, and the number of characters in the file.  Spaces and other whitespace do not count as characters. Files “Gettysburg_Address.txt” and “testfile.txt” are up on Moodle for your use.
-
+Count Lines, words, and characters in a file.
 '''
 import numpy as np
 
-# Question No: 1 Count line, word and charecter
+# Count line, word and charecter
 # ---first method---
 # loading the txt file in Python
 # Loading 'testfile.txt' test file by using genfromtxt
-# If i don't use delimiter while  loading the file some reason program crash
+
 testfile = np.genfromtxt('testfile.txt', dtype=None, delimiter=",")
 print(testfile)
 
 '''
 To load the text file "Gettysburg_Address.txt". i tried to load the test file by using genfrom test but because of
-special charecter 'ó', it's fail to load in python. I tried hard but at the end, i decide to remove the special charecter 'ó'
+special charecter 'ó', it's fail to load in python. its happen if you bring file from different platform (operating system)
+I tried hard but at the end, i decide to remove the special charecter 'ó', easy method is copy the text file and past it in
+new next file.
 by using find and replace option from notepad, and save file as a 'Gettysburgtest.txt'
-by using 'open' i am able to load the test file in python, this method i find from internet line 26 to 28.
+by using 'open' i am able to load the test file in python, 
 '''
 with open('Gettysburgtest.txt') as Gettysburg:
     textcontent = Gettysburg.readlines()
@@ -128,9 +127,4 @@ print("Number of line =", line1)
 print("Number of charecter =", charecter1)
 
 
-'''
-Final thought
-I never work this kind of excercise before, it is a very good excercise for me.
-I believe there is a better way to do this exercise, could you please provide feedback, as well as
-How can i load text file in python which has invalid cherecter like we have in our text ''ó''
-'''
+
